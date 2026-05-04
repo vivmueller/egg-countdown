@@ -7,7 +7,7 @@ TARGET = datetime(2026, 6, 4, 12, 0, 0, tzinfo=timezone.utc)  # 14:00 CEST = 12:
 now = datetime.now(timezone.utc)
 diff = TARGET - now
 
-W, H = 300, 70
+W, H = 400, 70
 
 def block(x, value, label):
     val = str(value).zfill(2)
