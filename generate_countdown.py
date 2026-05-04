@@ -7,7 +7,7 @@ TARGET = datetime(2026, 6, 4, 12, 0, 0, tzinfo=timezone.utc)  # 14:00 CEST = 12:
 now = datetime.now(timezone.utc)
 diff = TARGET - now
 
-W, H = 400, 90
+W, H = 300, 70
 
 def block(x, value, label):
     val = str(value).zfill(2)
@@ -40,7 +40,7 @@ svg = f"""<?xml version="1.0" encoding="UTF-8"?>
 
   <text x="{W//2}" y="16" font-family="Arial, Helvetica, sans-serif" font-size="11"
         fill="#555555" text-anchor="middle" letter-spacing="1">
-    EVENT · 4 JUNE 2026 · 14:00
+    Countdown:
   </text>
 
   {countdown_svg}
