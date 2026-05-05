@@ -7,19 +7,19 @@ TARGET = datetime(2026, 6, 4, 12, 0, 0, tzinfo=timezone.utc)  # 14:00 CEST = 12:
 now = datetime.now(timezone.utc)
 diff = TARGET - now
 
-W, H = 400, 70
+W, H = 400, 90
 
 def block(x, value, label):
     val = str(value).zfill(2)
     return f"""
-    <text x="{x}" y="40" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold"
+    <text x="{x}" y="60" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold"
           fill="#000000" text-anchor="middle">{val}</text>
-    <text x="{x}" y="54" font-family="Arial, Helvetica, sans-serif" font-size="11"
+    <text x="{x}" y="74" font-family="Arial, Helvetica, sans-serif" font-size="11"
           fill="#333333" text-anchor="middle">{label}</text>"""
 
 if diff.total_seconds() <= 0:
     countdown_svg = f"""
-    <text x="{W//2}" y="50" font-family="Arial, Helvetica, sans-serif" font-size="22"
+    <text x="{W//2}" y="70" font-family="Arial, Helvetica, sans-serif" font-size="22"
           fill="#000000" text-anchor="middle">The event has started!</text>"""
 else:
     total_seconds = int(diff.total_seconds())
@@ -29,16 +29,16 @@ else:
 
     countdown_svg = f"""
     {block(60,  days,    "DAYS")}
-    <text x="130" y="40" font-family="Arial, sans-serif" font-size="32" fill="#555555">:</text>
+    <text x="130" y="60" font-family="Arial, sans-serif" font-size="32" fill="#555555">:</text>
     {block(200, hours,   "HOURS")}
-    <text x="270" y="40" font-family="Arial, sans-serif" font-size="32" fill="#555555">:</text>
+    <text x="270" y="60" font-family="Arial, sans-serif" font-size="32" fill="#555555">:</text>
     {block(340, minutes, "MIN")}"""
 
 svg = f"""<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
   <!-- No background rect = transparent -->
   
-<text x="{W//2}" y="10" font-family="Arial, Helvetica, sans-serif" font-size="16"
+<text x="{W//2}" y="25" font-family="Arial, Helvetica, sans-serif" font-size="16"
         fill="#555555" text-anchor="middle" letter-spacing="1">
     Countdown:
   </text>
