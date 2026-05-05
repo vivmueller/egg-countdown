@@ -14,7 +14,7 @@ def block(x, value, label):
     return f"""
     <text x="{x}" y="42" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold"
           fill="#000000" text-anchor="middle">{val}</text>
-    <text x="{x}" y="58" font-family="Arial, Helvetica, sans-serif" font-size="11"
+    <text x="{x}" y="54" font-family="Arial, Helvetica, sans-serif" font-size="11"
           fill="#333333" text-anchor="middle">{label}</text>"""
 
 if diff.total_seconds() <= 0:
