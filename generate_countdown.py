@@ -38,7 +38,7 @@ svg = f"""<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
   <!-- No background rect = transparent -->
   
-<text x="{W//2}" y="16" font-family="Arial, Helvetica, sans-serif" font-size="11"
+<text x="{W//2}" y="20" font-family="Arial, Helvetica, sans-serif" font-size="11"
         fill="#555555" text-anchor="middle" letter-spacing="1">
     Countdown:
   </text>
