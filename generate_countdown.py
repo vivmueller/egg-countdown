@@ -12,7 +12,7 @@ W, H = 400, 70
 def block(x, value, label):
     val = str(value).zfill(2)
     return f"""
-    <text x="{x}" y="42" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold"
+    <text x="{x}" y="40" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold"
           fill="#000000" text-anchor="middle">{val}</text>
     <text x="{x}" y="54" font-family="Arial, Helvetica, sans-serif" font-size="11"
           fill="#333333" text-anchor="middle">{label}</text>"""
@@ -29,9 +29,9 @@ else:
 
     countdown_svg = f"""
     {block(60,  days,    "DAYS")}
-    <text x="148" y="46" font-family="Arial, sans-serif" font-size="32" fill="#555555">:</text>
+    <text x="148" y="40" font-family="Arial, sans-serif" font-size="32" fill="#555555">:</text>
     {block(200, hours,   "HOURS")}
-    <text x="288" y="46" font-family="Arial, sans-serif" font-size="32" fill="#555555">:</text>
+    <text x="288" y="40" font-family="Arial, sans-serif" font-size="32" fill="#555555">:</text>
     {block(340, minutes, "MIN")}"""
 
 svg = f"""<?xml version="1.0" encoding="UTF-8"?>
