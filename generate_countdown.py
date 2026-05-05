@@ -29,9 +29,9 @@ else:
 
     countdown_svg = f"""
     {block(60,  days,    "DAYS")}
-    <text x="148" y="35" font-family="Arial, sans-serif" font-size="32" fill="#555555">:</text>
+    <text x="130" y="40" font-family="Arial, sans-serif" font-size="32" fill="#555555">:</text>
     {block(200, hours,   "HOURS")}
-    <text x="288" y="35" font-family="Arial, sans-serif" font-size="32" fill="#555555">:</text>
+    <text x="270" y="40" font-family="Arial, sans-serif" font-size="32" fill="#555555">:</text>
     {block(340, minutes, "MIN")}"""
 
 svg = f"""<?xml version="1.0" encoding="UTF-8"?>
