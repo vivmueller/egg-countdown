@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generates a countdown SVG for the event starting Thursday 14:00 CEST (UTC+2).
+Generates a countdown SVG for the event starting Thursday 10:00 CEST (UTC+2).
 To re-use for next year:
 1) Update TARGET below.
 2) GitHub -> Settings -> Developer settings -> Personal access tokens -> Fine-grained tokens -> create new token (or regenerate old one)
@@ -16,7 +16,7 @@ To re-use for next year:
 
 from datetime import datetime, timezone
 
-TARGET = datetime(2027, 5, 27, 12, 0, 0, tzinfo=timezone.utc)  # 14:00 CEST = 12:00 UTC
+TARGET = datetime(2027, 5, 27, 8, 0, 0, tzinfo=timezone.utc)  # 10:00 CEST = 08:00 UTC
 now = datetime.now(timezone.utc)
 diff = TARGET - now
 
