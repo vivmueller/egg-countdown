@@ -3,7 +3,7 @@
 
 from datetime import datetime, timezone
 
-TARGET = datetime(2026, 6, 4, 12, 0, 0, tzinfo=timezone.utc)  # 14:00 CEST = 12:00 UTC
+TARGET = datetime(2027, 5, 27, 12, 0, 0, tzinfo=timezone.utc)  # 14:00 CEST = 12:00 UTC
 now = datetime.now(timezone.utc)
 diff = TARGET - now
 
