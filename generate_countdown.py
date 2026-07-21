@@ -1,5 +1,18 @@
 #!/usr/bin/env python3
-"""Generates a countdown SVG for the event on June 4, 2026 at 14:00 CEST (UTC+2)."""
+"""
+Generates a countdown SVG for the event starting Thursday 14:00 CEST (UTC+2).
+To re-use for next year:
+1) Update TARGET below.
+2) GitHub -> Settings -> Developer settings -> Personal access tokens -> Fine-grained tokens -> create new token (or regenerate old one)
+  Grant access to repository: vivmueller/egg-countdown
+  Grant permission:           Actions: Read and write, Content: Read
+  Expire date:                End of egg
+  Copy the new token.
+3) Update cron-job.org > egg-countdown > Details > Edit Cronjob > Advanced > Headers >  Key: Authorization, Value: token [insert token after 'token '] (it should look like: "token githubxxxx")
+  Save, test run.
+4) Embed in Wiki: {{ https://raw.githubusercontent.com/vivmueller/egg-countdown/main/countdown.svg }}
+
+"""
 
 from datetime import datetime, timezone
 
